@@ -17,22 +17,12 @@
 
 ## 项目结构
 ```text
-workspace/
-├── data/
-│   ├── meta_data/
-│   │   └── meta_data.csv            # 验证集
-│   └── start_data/
-│       └── start_data.csv           # 初始启动数据集
-├── meta_kd/
-│   ├── __pycache__/                
+├── meta_kd/              
 │   ├── base_t5_models.py           # 模型架构定义（包含层级划分逻辑，教师/学生/辅助/元学习器模型）
 │   ├── hierarchical_loss.py        # 师生层级损失函数
 │   ├── main.py                     # 模型训练主入口
 │   ├── meta_distill_strategy.py    # 元蒸馏策略
 │   ├── README.md                   
-│   ├── t5_encoder_only.pth         # 纯编码器权重
-│   ├── t5_student.pth              # 完整的 T5 学生模型权重
-│   ├── train.log                   # 训练日志文件
 │   ├── use_student.py              # 模型推理示例脚本
 │   └── weighted_aggregation.py     # 加权聚合算法
 ```
